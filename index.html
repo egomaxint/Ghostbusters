@@ -7,28 +7,33 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap"
       rel="stylesheet"
     />
-
+    <script src="scripts/jquery-3.5.1.min.js" defer></script>
+    <script src="scripts/jquery.fancybox.min.js" defer></script>
+    <script src="scripts/main.js" defer></script>
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/jquery.fancybox.min.css" />
     <title>Охотники за привидениями: Наследники</title>
   </head>
   <body>
     <header class="header">
       <img class="logo" src="img/logo.png" alt="logo" />
-      <input
-        type="text"
-        class="search-input"
-        placeholder="Поиск по фильмам.."
-      />
-      <nav class="navigation">
-        <a href="#" class="navigation-link">Фильмы</a>
-        <a href="#" class="navigation-link">ТВ</a>
-        <a href="#" class="navigation-link">Новости</a>
-        <a href="#" class="navigation-link">О сервисе</a>
-      </nav>
-      <div class="button-group">
-        <button class="button sign-up">Регистрация</button>
-        <button class="button log-in">Войти</button>
+      <div class="m-menu">
+        <input
+          type="text"
+          class="search-input"
+          placeholder="Поиск по фильмам.."
+        />
+        <nav class="navigation">
+          <a href="#" class="navigation-link">Фильмы</a>
+          <a href="#" class="navigation-link">ТВ</a>
+          <a href="#" class="navigation-link">Новости</a>
+          <a href="#" class="navigation-link">О сервисе</a>
+        </nav>
+        <div class="button-group">
+          <button class="button sign-up">Регистрация</button>
+          <button class="button log-in">Войти</button>
+        </div>
       </div>
       <div class="mobile-buttons">
         <button class="search-button">
@@ -46,10 +51,14 @@
         <div class="film-wrapper">
           <div class="film-trailer">
             <img src="img/poster.jpg" alt="Poster" class="poster" />
-            <button class="trailer-button">
+            <a
+              data-fancybox
+              href="https://www.youtube.com/watch?v=84a2VD68hJU&t=3s"
+              class="trailer-button"
+            >
               <img src="img/play.svg" alt="play" class="trailer-button-icon" />
               <span class="trailer-button-text">Посмотреть трейлер</span>
-            </button>
+            </a>
           </div>
           <!-- /.film-trailer -->
           <div class="film-text">
@@ -121,12 +130,12 @@
     <section class="cast">
       <div class="container">
         <div class="tabs">
-          <h2 class="section-title active">Актёры</h2>
+          <h2 class="section-title">Актёры</h2>
           <h2 class="section-title">Создатели</h2>
         </div>
         <!-- /.tabs -->
         <div class="tabs-content">
-          <div class="card">
+          <div class="card actor">
             <img src="img/actors/1.png" alt="Кэрри Кун" class="card-image" />
             <div class="card-text">
               <h3 class="name">Кэрри Кун</h3>
@@ -134,7 +143,7 @@
             </div>
           </div>
           <!-- /.card -->
-          <div class="card">
+          <div class="card actor">
             <img src="img/actors/2.png" alt="Билл Мюррей" class="card-image" />
             <div class="card-text">
               <h3 class="name">Билл Мюррей</h3>
@@ -142,7 +151,7 @@
             </div>
           </div>
           <!-- /.card -->
-          <div class="card">
+          <div class="card actor">
             <img src="img/actors/3.png" alt="Пол Радд" class="card-image" />
             <div class="card-text">
               <h3 class="name">Пол Радд</h3>
@@ -150,7 +159,7 @@
             </div>
           </div>
           <!-- /.card -->
-          <div class="card">
+          <div class="card actor">
             <img src="img/actors/4.png" alt="Энни Поттс" class="card-image" />
             <div class="card-text">
               <h3 class="name">Энни Поттс</h3>
@@ -158,7 +167,7 @@
             </div>
           </div>
           <!-- /.card -->
-          <div class="card">
+          <div class="card actor">
             <img
               src="img/actors/5.png"
               alt="МакКенна Грейс"
@@ -170,7 +179,7 @@
             </div>
           </div>
           <!-- /.card -->
-          <div class="card">
+          <div class="card actor">
             <img src="img/actors/6.jpg" alt="Дэн Эйкройд" class="card-image" />
             <div class="card-text">
               <h3 class="name">Дэн Эйкройд</h3>
@@ -178,7 +187,7 @@
             </div>
           </div>
           <!-- /.card -->
-          <div class="card">
+          <div class="card actor">
             <img src="img/actors/7.png" alt="Эрни Хадсон" class="card-image" />
             <div class="card-text">
               <h3 class="name">Эрни Хадсон</h3>
@@ -186,11 +195,27 @@
             </div>
           </div>
           <!-- /.card -->
-          <div class="card">
+          <div class="card actor">
             <img src="img/actors/8.png" alt="Финн Вулфард" class="card-image" />
             <div class="card-text">
               <h3 class="name">Финн Вулфард</h3>
               <span class="en-name">Finn Wolfhard</span>
+            </div>
+          </div>
+          <!-- /.card -->
+          <div class="card creator">
+            <img src="img/creators/360.webp" alt="Гил Кинан" class="card-image" />
+            <div class="card-text">
+              <h3 class="name">Гил Кинан</h3>
+              <span class="en-name">Gil Kenan</span>
+            </div>
+          </div>
+          <!-- /.card -->
+          <div class="card creator">
+            <img src="img/creators/kinopoisk.ru-Jason-Reitman-1909761.jpg" alt="Джейсон Райтман" class="card-image" />
+            <div class="card-text">
+              <h3 class="name">Джейсон Райтман</h3>
+              <span class="en-name">Jason Reitman</span>
             </div>
           </div>
           <!-- /.card -->
