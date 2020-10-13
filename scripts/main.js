@@ -41,3 +41,39 @@ mMenuBtn.addEventListener('click', (evt) => {
   mMenu.classList.toggle('active');
   body.classList.toggle('no-scroll');
 });
+
+var mySwiper = new Swiper('.swiper-container', {
+  // Optional parameters
+  slidesPerView: 4,
+  direction: 'horizontal',
+  loop: true,
+  spaceBetween: 25,
+  breakpoints: {
+    992: {
+      slidesPerView: 4,
+    },
+    576: {
+      
+      slidesPerView: 2,
+      navigation: {
+        nextEl: '.button-next'
+      },
+    },
+    0: {
+      slidesPerView: 1,
+    }
+  },
+
+   pagination: {
+    el: '.swiper-pagination',
+  },
+  
+
+  
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+  
+})
